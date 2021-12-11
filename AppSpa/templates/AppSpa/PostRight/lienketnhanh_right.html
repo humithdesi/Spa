@@ -1,0 +1,6 @@
+<h6 class="p-3 " style="background-color:#8F625C;color:white">DANH MỤC SẢN PHẢM</h6>
+<nav class="px-3" style="list-style-type:none;">
+    {% for post in posts %}
+    <li class="my-2"><a href="/post/{{post.slug}}" style="text-decoration:none;color:black">{{post.title}}</a></li>
+    {% endfor %}
+</nav>

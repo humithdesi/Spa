@@ -1,0 +1,27 @@
+{% extends "AppSpa/base.html" %}
+ 
+{% block Erro %}
+
+{% load static %}
+{% load post_right %}
+
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/post.css' %}">
+<div class="container mt-5">
+    <div class="row gx-5">
+        <div class="col"style="text-align:center" >
+            <h1 style="color:blue">{{loi}}</h1>
+        </div>
+
+
+        <div class="col-3 tag-right" style="">
+            <div class="pb-2" style="background-color:#8ED30B">{% LienKetNhanh %}</div>
+            <div class="mt-2 p-3" style="background-color:#8F625C;">{% DangKy %}</div>
+            <div class="mt-2 ">{% TieuDiemWeb %}</div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

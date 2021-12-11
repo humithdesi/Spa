@@ -1,0 +1,50 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/Foorter.css' %}">
+
+<div class="container Foorter-Grid" style="color:white" >
+
+    <div class="AddRest"style="padding:20px;">
+    <h3 style="color:yellow">Địa Chỉ</h3>
+    <div class="mt-4">
+    <p><span style="padding-right:10px;color:white"><i class="fas fa-map-marker-alt"></i></span> E3/16 Tổ 32, Khu phố Bình Thuận 2, Đ. D8, Thuận Giao, Thuận An, Bình Dương</p>
+    <p><span style="padding-right:10px;color:white"><i class="fas fa-globe"></i></span> https://www.mailisa.com</p>
+    <p><span style="padding-right:10px;color:white"><i class="fas fa-phone"></i></span> 190015773</p>
+    <p><span style="padding-right:10px;color:white"><i class="fas fa-at"></i></span> XP69+P9 Thuận An, Bình Dương</p>
+    </div>
+    </div>
+
+    <div class="List-Tag" style="padding:20px;">
+    <h3 style="color:yellow">Tag</h3>
+    <div class="mt-3" >
+    {% for tag in tags %}
+        <p><a href="/tag/{{tag.slug}}" style="color:white; text-decoration:none">{{tag.name}}</a></p>
+    {% endfor %}
+    </div>
+    </div>
+
+    <div class="Gallery" style="padding:20px;">
+        <h3 style="color:yellow">Gallery</h3>
+        <div class="mt-3 Gallery-Grid">
+            {% for post in posts %}
+        <div style="padding:5px"><img class="img-fluid" src="/media/{{post.image}}" style="height:50px;width:100%"></div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="Mail" style="padding:20px">
+        <h3 style="color:yellow">Mailing</h3>
+        <div class="mt-3">
+            <p>Chúng tôi sẽ trả lời trong vòng 24 giờ. Gửi Email. E-mail đến Tổng Giám Đốc LG Việt Nam. Liên hệ đến Văn phòng Tổng Giám Đốc LG Việt ...</p>
+            <input class="form-control" type="email" placeholder="Email..">
+            <p>Liên hệ với chúng tôi</p>
+            <p>
+                <span style=";font-size:30px;color:yellow"><i class="fab fa-instagram-square"></i></span>
+                <span style=";font-size:30px;color:yellow"><i class="fab fa-instagram-square"></i></span>
+                <span style=";font-size:30px;color:yellow"><i class="fab fa-instagram-square"></i></span>
+
+
+            </p>
+        </div>
+    </div>
+
+</div>

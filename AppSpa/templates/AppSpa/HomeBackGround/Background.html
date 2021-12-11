@@ -1,0 +1,48 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/HomeBackGround.css' %}">
+<script type="text/javascript" src="{% static 'js/Slide_animations.js' %}" ></script>
+
+
+<div class="slideshow-container">
+    <div class="image-none">
+        <img src="media/background_Slide/Anh1.jpg" style="">
+    </div>
+        <div class="image-none">
+        <img src="media/background_Slide/Anh2.jpg" style="">
+    </div>
+        <div class="image-none">
+        <img src="media/background_Slide/Anh3.jpg" style="">
+    </div>
+
+    <div class="prev">
+        <span onclick="prev()" class="prevThea"><i class="fas fa-angle-left"></i></span>
+        <span onclick="next()" class="prevThea"><i class="fas fa-angle-right"></i></span>
+    </div>
+</div>
+<script>
+ var slideIndex=1
+ show(slideIndex)
+function show(n){
+    var slide=$('.image-none')
+    if(n<0){slideIndex= slide.length-1}
+    if(n>=slide.length){slideIndex=0}
+
+    for(var i=0;i<slide.length;i++){
+    var $item=$(slide[i])
+    $item.removeClass('image-active')
+    }
+    var $item1=$(slide[slideIndex])
+    $item1.addClass('image-active')
+
+}
+
+function next(){
+slideIndex +=1
+show(slideIndex)
+}
+function prev(){
+slideIndex -=1
+show(slideIndex)
+}
+
+</script>

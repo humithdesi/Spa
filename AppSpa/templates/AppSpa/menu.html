@@ -1,0 +1,57 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/menu.css' %}">
+
+<div class="menu shadow" style="">
+    <div class="menu-item nav-item"><a class="nav-link ">TRANG CHỦ</a></div>
+    <div class="menu-item nav-item"><a class="nav-link ">GIỚI THIỆU</a></div>
+    <div class="menu-item nav-item"><a class="nav-link ">DỊCH VỤ TÓC</a></div>
+    <div class="menu-item nav-item menu-dropdown ">
+        <a class="nav-link ">TAG</a>
+          <div class="menu-dropdown-content">
+            {% for tag in tags%}
+              <a href="/tag/{{tag.slug}}">{{tag.name}}</a>
+            {% endfor %}
+          </div>
+    </div>
+
+
+    <div class="menu-item nav-item"><a class="nav-link ">SẢN PHẨM</a></div>
+    <div class="menu-item nav-item" ><a class="nav-link">LIÊN HỆ</a></div>
+    <div class="menu-Ver" STYLE="font-weight:bold">Thẩm Mỹ, Nám Da, Mụn Trúng Ca,</div>
+    <div class="menu-Ver menuVer-dropdow" >
+        <span  onclick="menuVerToggle()" class="" style="font-size:40px;cursor:pointer"><i class="fas fa-bars"></i></span>
+        <div class="menuVer-dropdow-content">
+            {% for tag in tags%}
+              <a href="/tag/{{tag.slug}}">{{tag.name}}</a>
+            {% endfor %}
+            <a href="#" style="color:red" onclick="menuVerRemove()"><i class="fas fa-times"></i> <span style="color:red;font-size:20px;font-weight:bold">close</span></a>
+        </div>
+
+    </div>
+</div>
+<script>
+$(window).scroll
+(
+     function (event)
+     {
+          var scrolled_val =  $(window).scrollTop();
+          console.log(scrolled_val)
+         if(scrolled_val>140){
+         $('.menu').addClass('menu-trans')
+         }
+         if(scrolled_val>260){
+         $('.menu').addClass('menu-fixed')
+         }
+          if(scrolled_val<140){
+         $('.menu').removeClass('menu-fixed')
+         $('.menu').removeClass('menu-trans')
+         }
+     }
+ );
+function menuVerToggle(){
+$('.menuVer-dropdow-content').toggleClass('menuVer-dropdow-content-active')}
+function menuVerRemove(){
+$('.menuVer-dropdow-content').removeClass('menuVer-dropdow-content-active')}
+
+</script>

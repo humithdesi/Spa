@@ -1,0 +1,21 @@
+.MoTa-Grid1{display:grid;
+  grid-template-columns: 50% 50%;
+  column-gap: 2.5em;
+  padding:20px
+  }
+.MoTa-Grid1 h1{color:blue}
+.MoTa-Grid1 {margin-top:30px}
+.MoTa-Grid2{display:grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  padding:20px
+  }
+@media only screen and (max-width: 990px) {
+
+          .MoTa-Grid1{display:grid;
+  grid-template-columns: 100%;
+}
+           .MoTa-Grid1 h1{color:blue;margin-top:10px}
+           .MoTa-Grid2{display:grid;
+  grid-template-columns: 50% 50%;
+ }
+                                            }

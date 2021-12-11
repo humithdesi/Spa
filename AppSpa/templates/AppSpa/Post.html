@@ -1,0 +1,58 @@
+{% extends 'AppSpa/base.html' %}
+{% block Post %}
+{% load static %}
+{% load post_right %}
+{% load string_title %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/post.css' %}">
+<div class="container mt-5">
+    <div class="row gx-5">
+        <div class="col" >
+            <div class="post-content">
+                <h1>{{post.title|title}}</h1>
+                <p>
+                    {% for tag in post.tag.all %}
+                    <a style="text-decoration:none;color:red" href="/tag/{{tag.slug}}">{{tag.name}}</a>,
+                    {% endfor %}
+                </p>
+                <p>{{post.description}}</p>
+                <nav style="">
+                    {% for post in posts%}
+                    <li><a href="/post/{{post.slug}}" style="text-decoration:none;color:red">{{post.title}}</a></li>
+                    {% endfor %}
+                </nav>
+                <div class="post-content-body mt-2">
+                    {{post.content|safe}}
+                </div>
+            </div>
+            <h4 class="mt-5">Có Thể Bạn Quan Tâm:</h4>
+            <div class="mt-4 grid-contai" style="">
+                {% for post in posts %}
+                <div class="grid-item" style="">
+                    <img class="img-thumbnail"style="border:none;width:100%;" src="/media/{{post.image}}">
+                    <h4 style="color:red">{{post.title}}</h4>
+                    <a href="/post/{{post.slug}}"><p style="color:blue; overflow: hidden;
+                       text-overflow: ellipsis;
+                       display: -webkit-box;
+                       -webkit-line-clamp: 2; /* number of lines to show */
+                       -webkit-box-orient: vertical;">
+                        {{post.description}}
+                    </p>
+                     </a>
+                </div>
+
+                {% endfor %}
+            </div>
+
+        </div>
+
+        <div class="col-3 tag-right" style="">
+            <div class="pb-2" style="background-color:#8ED30B">{% LienKetNhanh %}</div>
+            <div class="mt-2 p-3" style="background-color:#8F625C;">{% DangKy %}</div>
+            <div class="mt-2 ">{% TieuDiemWeb %}</div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

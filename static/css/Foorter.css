@@ -1,0 +1,23 @@
+.Foorter-Grid{display:grid;
+  grid-template-columns: 25% 25% 25% 25%;
+text-align:left;
+padding-top:20px;
+padding-bot:20px
+  }
+.Gallery-Grid{display:grid;
+grid-template-columns: 25% 25% 25% 25%;
+  }
+
+@media only screen and (max-width: 990px) {
+.Foorter-Grid{display:grid;
+  grid-template-columns: 100%;
+
+  }
+
+.Gallery{display:none}
+.List-Tag{display:none}
+           .MoTa-Grid1 h1{color:blue;margin-top:10px}
+           .MoTa-Grid2{display:grid;
+  grid-template-columns: 50% 50%;
+ }
+                                            }

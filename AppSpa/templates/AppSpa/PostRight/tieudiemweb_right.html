@@ -1,0 +1,19 @@
+<h6 class="p-3 " style="background-color:#8F625C;color:white">TIÊU ĐIỂM WEB </h6>
+{% for post in posts %}
+<a href="/post/{{post.slug}}">
+<div  class="row" style="display:flex;" >
+    <div class="col-4 " style="text-align:center">
+        <img  class="img-thumbnail"style="border:none;height:60px;width:80px" src="/media/{{post.image}}">
+    </div>
+    <div class="col-8">
+         <p style=" overflow: hidden;
+                       text-overflow: ellipsis;
+                       display: -webkit-box;
+                       -webkit-line-clamp: 2; /* number of lines to show */
+                       -webkit-box-orient: vertical;">
+             {{post.description}}
+                    </p>
+    </div>
+</div>
+</a>
+{% endfor %}

@@ -1,0 +1,7 @@
+.imgTop{ width: auto;
+  height: 100px;
+  object-fit: cover;}
+@media only screen and (max-width: 990px) {
+        .two{display:none}
+        .three{display:none}
+    }
