@@ -1,0 +1,7 @@
+.grid-contai{
+display:grid;grid-template-columns: 33.3% 33.3% 33.3%;}
+
+@media only screen and (max-width: 990px) {
+        .tag-right{display:none}
+        .grid-contai{display:block}
+    }

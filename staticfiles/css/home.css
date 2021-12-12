@@ -1,0 +1,45 @@
+{% load static %}
+.DoiNet-grid{display:grid;
+grid-template-columns: 25% 25% 25% 25%;
+column-gap:px;
+margin-top:20px;
+}
+
+
+.CongNghe-gird{display:grid;
+grid-template-columns: 33% 33% 33%;
+column-gap:px;
+margin-top:20px;
+padding:20px;
+}
+.DoiNet-grid div{margin-top:20px;padding:10px}
+@media only screen and (max-width: 990px) {
+        .DoiNet-grid{display:grid;
+            grid-template-columns: 50% 50%;
+            column-gap:px;
+            margin:10px;}
+        .CongNghe-gird{display:grid;
+            grid-template-columns: 100%;
+            column-gap:px;
+            margin-top:20px;
+}
+    }
+.Card{margin:20px;text-align:center;transition:0.5s; height:450px}
+.Card h3{margin-top:10px}
+.Card-hover{;height:0px; visibility: hidden;}
+.Card:hover{margin-top:-5px;box-shadow: 0px 10px 10px #888888; padding:20px; height:520px}
+.Card:hover .text-more {height:0px;visibility: hidden;}
+.Card:hover .Card-hover {height:40px;visibility: visible;}
+
+
+.slide-inner{width:100%;height:400px;display:flex;justify-content:center; padding:30px}
+.img-none {position:absolute;visibility:hidden;
+transform: translate(50px,0px);
+;}
+.img-active{position:static;visibility:visible; display:flex;
+transition:1s;
+height:300px;
+transform: translate(0px,0px);}
+
+
+
