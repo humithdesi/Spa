@@ -6,7 +6,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('home',Home,name='homepage'),
+    path('',Home,name='homepage'),
     path('tag/<slug:slug>',TagList,name='tagpage'),
     path('post/<slug:slug>',PostPage,name='postpage'),
 ]

@@ -1,9 +1,10 @@
+{% load static %}
 <h6 class="p-3 " style="background-color:#8F625C;color:white">TIÊU ĐIỂM WEB </h6>
 {% for post in posts %}
 <a href="/post/{{post.slug}}">
 <div  class="row" style="display:flex;" >
     <div class="col-4 " style="text-align:center">
-        <img  class="img-thumbnail"style="border:none;height:60px;width:80px" src="/media/{{post.image}}">
+        <img  class="img-thumbnail"style="border:none;height:60px;width:80px" src="{% static 'media/background_Slide/FN311.jpg' %}">
     </div>
     <div class="col-8">
          <p style=" overflow: hidden;

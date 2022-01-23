@@ -5,7 +5,7 @@ register=template.Library()
 
 @register.inclusion_tag('AppSpa/PostRight/lienketnhanh_right.html',)
 def LienKetNhanh():
-    posts = Post.objects.all()
+    posts = Post.objects.all()[:6]
     content = {'posts': posts}
     return content
 @register.inclusion_tag('AppSpa/PostRight/dangky_right.html',)
@@ -14,7 +14,7 @@ def DangKy():
     return content
 @register.inclusion_tag('AppSpa/PostRight/tieudiemweb_right.html',)
 def TieuDiemWeb():
-    posts=Post.objects.all()
+    posts=Post.objects.all()[:6]
     content={'posts':posts}
     return content
 
