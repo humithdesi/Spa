@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-rql=-+eucz9_^*8@%hc68$!s$mb*ynh766^)t&+r+71ll*ydtq
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['webthammy.herokuapp.com']
 
 
 # Application definition
