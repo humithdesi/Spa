@@ -1,1 +1,0 @@
-web: gunicorn Spa.wsgi --log-file -

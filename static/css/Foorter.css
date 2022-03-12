@@ -2,7 +2,7 @@
   grid-template-columns: 25% 25% 25% 25%;
 text-align:left;
 padding-top:20px;
-padding-bot:20px
+padding-bottom:20px
   }
 .Gallery-Grid{display:grid;
 grid-template-columns: 25% 25% 25% 25%;
