@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-rql=-+eucz9_^*8@%hc68$!s$mb*ynh766^)t&+r+71ll*ydtq
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['Spa2-dev.us-west-2.elasticbeanstalk.com','*']
 
 
 # Application definition
