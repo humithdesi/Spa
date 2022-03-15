@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'Spa.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST': 'localhost',
+        'NAME': 'spademo',
+        'USER': 'spadatabase5',
+        'PASSWORD': 'spadatabase5',
+        'HOST': 'database-1.cxosr4erkk4r.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
